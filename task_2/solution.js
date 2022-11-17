@@ -33,12 +33,10 @@ function calcDiscount(sum, min, discount) {
     let discountPart = discount; // величина скидки в процентах
 
     // Задание №2.2. Рассчитать скидку
-let discountSum; // создайте переменную discountSum
+let discountSum = productsSum >= discountMinSum ? productsSum / 100 * discountPart : 0; // создайте переменную discountSum
 
-if (productsSum >= discountMinSum) {
-    discountSum = productsSum / 100 * discountPart; 
-}
-else (discountSum = 0);
+
+
 
      // если productsSum больше или равно discountMinSum,
     // то присвойте discountSum значение discountPart процентов от productsSum,
@@ -68,7 +66,7 @@ let totalSum = productsSum;  // создайте переменную totalSum
 
     let freeShipping;   // создайте переменную freeShipping
 
-    freeShipping = !Boolean(shippingSum);   // запишите без использования if или любых других условий:
+    freeShipping = !(shippingSum);   // запишите без использования if или любых других условий:
     // если shippingSum равно нулю, то freeShipping должна быть равна true, иначе freeShipping должна быть равна false
 
     
